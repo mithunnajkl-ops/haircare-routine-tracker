@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HairCare Tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>✦</span> HairCare
+        </div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#routine">Routine</a>
+            <a href="#progress">Progress</a>
+            <a href="#notes">Notes</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="dashboard">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR PERSONAL HAIR JOURNEY</p>
+
+                <h1>
+                    Love your hair.<br>
+                    <span>Track your progress.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Build healthy habits, stay consistent, and keep track
+                    of your haircare journey every day.
+                </p>
+
+                <button class="primary-btn" onclick="scrollToRoutine()">
+                    Start Today's Routine →
+                </button>
+            </div>
+
+            <div class="hero-card">
+                <div class="hair-icon">🌸</div>
+                <p>Today's Progress</p>
+
+                <div class="big-progress" id="heroProgress">
+                    0%
+                </div>
+
+                <div class="progress-bar">
+                    <div id="heroProgressBar"></div>
+                </div>
+
+                <small>Keep going — consistency is key!</small>
+            </div>
+        </section>
+
+
+        <!-- STATS -->
+        <section class="stats">
+            <div class="stat-card">
+                <span class="stat-icon">🔥</span>
+                <div>
+                    <h3 id="streak">0</h3>
+                    <p>Day Streak</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">✓</span>
+                <div>
+                    <h3 id="completedCount">0</h3>
+                    <p>Tasks Completed</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">💧</span>
+                <div>
+                    <h3 id="washCount">0</h3>
+                    <p>Hair Washes</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">📅</span>
+                <div>
+                    <h3 id="todayDate">--</h3>
+                    <p>Today</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ROUTINE -->
+        <section class="section" id="routine">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">DAILY ROUTINE</p>
+                    <h2>Today's Haircare</h2>
+                </div>
+
+                <div class="date-box" id="fullDate">
+                    Loading...
+                </div>
+            </div>
+
+
+            <div class="routine-grid">
+
+                <!-- MORNING -->
+                <div class="routine-card">
+                    <div class="routine-header">
+                        <div>
+                            <span class="time">☀️ MORNING</span>
+                            <h3>Morning Routine</h3>
+                        </div>
+
+                        <span class="routine-count">
+                            <span id="morningCount">0</span>/3
+                        </span>
+                    </div>
+
+                    <div class="task-list">
+
+                        <label class="task">
+                            <input type="checkbox" class="routine-task morning">
+                            <span class="checkmark"></span>
+
+                            <div>
+                                <strong>Drink Water</strong>
+                                <p>Start your day hydrated.</p>
+                            </div>
+                        </label>
+
+
+                        <label class="task">
+                            <input type="checkbox" class="routine-task morning">
+                            <span class="checkmark"></span>
+
+                            <div>
+                                <strong>Gentle Scalp Massage</strong>
+                                <p>Massage for 3–5 minutes.</p>
+                            </div>
+                        </label>
+
+
+                        <label class="task">
+                            <input type="checkbox" class="routine-task morning">
+                            <span class="checkmark"></span>
+
+                            <div>
+                                <strong>Apply Hair Serum</strong>
+                                <p>Use a small amount on the lengths.</p>
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+
+
+                <!-- EVENING -->
+                <div class="routine-card">
+                    <div class="routine-header">
+                        <div>
+                            <span class="time">🌙 EVENING</span>
+                            <h3>Evening Routine</h3>
+                        </div>
+
+                        <span class="routine-count">
+                            <span id="eveningCount">0</span>/3
+                        </span>
+                    </div>
+
+                    <div class="task-list">
+
+                        <label class="task">
+                            <input type="checkbox" class="routine-task evening">
+                            <span class="checkmark"></span>
+
+                            <div>
+                                <strong>Brush Hair</strong>
+                                <p>Detangle gently from the ends.</p>
+                            </div>
+                        </label>
+
+
+                        <label class="task">
+                            <input type="checkbox" class="routine-task evening">
+                            <span class="checkmark"></span>
+
+                            <div>
+                                <strong>Apply Hair Oil</strong>
+                                <p>Use your preferred lightweight oil.</p>
+                            </div>
+                        </label>
+
+
+                        <label class="task">
+                            <input type="checkbox" class="routine-task evening">
+                            <span class="checkmark"></span>
+
+                            <div>
+                                <strong>Protect Hair Before Sleep</strong>
+                                <p>Use a silk/satin pillowcase or bonnet.</p>
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- WASH DAY -->
+            <div class="wash-day">
+
+                <div>
+                    <span class="eyebrow">WASH DAY</span>
+
+                    <h3>Did you wash your hair today?</h3>
+
+                    <p>
+                        Keep your wash history updated to understand
+                        your routine better.
+                    </p>
+                </div>
+
+                <button id="washButton" class="wash-btn" onclick="toggleWash()">
+                    💧 Mark Hair Washed
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+        <section class="section" id="progress">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR JOURNEY</p>
+                    <h2>Weekly Progress</h2>
+                </div>
+            </div>
+
+
+            <div class="progress-container">
+
+                <div class="progress-summary">
+
+                    <div class="progress-circle">
+                        <div>
+                            <strong id="weeklyPercent">0%</strong>
+                            <span>Weekly</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Keep building your routine</h3>
+                        <p>
+                            Small habits every day can make your haircare
+                            routine easier to maintain.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="week-chart">
+
+                    <div class="day">
+                        <span>M</span>
+                        <div class="bar" style="height: 40%"></div>
+                    </div>
+
+                    <div class="day">
+                        <span>T</span>
+                        <div class="bar" style="height: 65%"></div>
+                    </div>
+
+                    <div class="day">
+                        <span>W</span>
+                        <div class="bar" style="height: 30%"></div>
+                    </div>
+
+                    <div class="day">
+                        <span>T</span>
+                        <div class="bar" style="height: 80%"></div>
+                    </div>
+
+                    <div class="day">
+                        <span>F</span>
+                        <div class="bar active" id="todayBar" style="height: 5%"></div>
+                    </div>
+
+                    <div class="day">
+                        <span>S</span>
+                        <div class="bar" style="height: 0%"></div>
+                    </div>
+
+                    <div class="day">
+                        <span>S</span>
+                        <div class="bar" style="height: 0%"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOTES -->
+        <section class="section" id="notes">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">HAIR JOURNAL</p>
+                    <h2>Today's Notes</h2>
+                </div>
+            </div>
+
+            <div class="notes-card">
+
+                <textarea
+                    id="notesInput"
+                    placeholder="How does your hair feel today? Write down anything you notice..."
+                ></textarea>
+
+                <div class="notes-footer">
+                    <span id="saveStatus">Your notes are saved automatically.</span>
+
+                    <button onclick="saveNotes()" class="primary-btn small">
+                        Save Notes
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>✦ HairCare Tracker</p>
+        <span>Healthy hair starts with healthy habits.</span>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
